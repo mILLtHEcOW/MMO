@@ -1,0 +1,4 @@
+
+2021-08-02 16:57:25,663 [1] [INFO ] [GameServer] £ºGame Server Init
+2021-08-02 16:57:33,862 [1] [INFO ] [GameServer] £ºGame Server Exiting...
+2021-08-02 16:57:33,889 [1] [INFO ] [GameServer] £ºGame Server Exited

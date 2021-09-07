@@ -1,0 +1,9 @@
+D:\UnityProject\MMO\Src\Lib\Protocol\bin\Debug\Protocol.dll
+D:\UnityProject\MMO\Src\Lib\Protocol\bin\Debug\Protocol.pdb
+D:\UnityProject\MMO\Src\Lib\Protocol\bin\Debug\protobuf-net.dll
+D:\UnityProject\MMO\Src\Lib\Protocol\bin\Debug\protobuf-net.xml
+D:\UnityProject\MMO\Src\Lib\Protocol\obj\Debug\Protocol.csprojAssemblyReference.cache
+D:\UnityProject\MMO\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CoreCompileInputs.cache
+D:\UnityProject\MMO\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CopyComplete
+D:\UnityProject\MMO\Src\Lib\Protocol\obj\Debug\Protocol.dll
+D:\UnityProject\MMO\Src\Lib\Protocol\obj\Debug\Protocol.pdb

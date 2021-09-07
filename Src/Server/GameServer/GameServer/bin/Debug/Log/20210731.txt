@@ -1,0 +1,6 @@
+
+2021-07-31 17:55:07,304 [1] [INFO ] [GameServer] £ºGame Server Init
+2021-07-31 18:53:57,401 [1] [INFO ] [GameServer] £ºGame Server Init
+2021-07-31 18:54:15,117 [1] [INFO ] [GameServer] £ºGame Server Exiting...
+2021-07-31 18:54:15,152 [1] [INFO ] [GameServer] £ºGame Server Exited
+2021-07-31 19:00:03,736 [1] [INFO ] [GameServer] £ºGame Server Init

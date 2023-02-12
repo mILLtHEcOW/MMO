@@ -60,9 +60,9 @@
   </Association>
   <EntityType Name="TCharItem">
     <Key>
-      <PropertyRef Name="Id" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <NavigationProperty Name="TCharacter" Relationship="ExtremeWorldModel.TCharacterTCharItem" FromRole="TCharItem" ToRole="TCharacter" />
     <Property Name="TCharacterID" Type="Int32" Nullable="false" />
   </EntityType>

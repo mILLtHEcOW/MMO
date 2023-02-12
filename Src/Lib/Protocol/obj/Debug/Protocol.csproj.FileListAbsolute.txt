@@ -7,3 +7,12 @@ D:\UnityProject\MMO\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CoreCompileInputs
 D:\UnityProject\MMO\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CopyComplete
 D:\UnityProject\MMO\Src\Lib\Protocol\obj\Debug\Protocol.dll
 D:\UnityProject\MMO\Src\Lib\Protocol\obj\Debug\Protocol.pdb
+C:\Users\mtk15\source\repos\MMO\Src\Lib\Protocol\bin\Debug\Protocol.dll
+C:\Users\mtk15\source\repos\MMO\Src\Lib\Protocol\bin\Debug\Protocol.pdb
+C:\Users\mtk15\source\repos\MMO\Src\Lib\Protocol\bin\Debug\protobuf-net.dll
+C:\Users\mtk15\source\repos\MMO\Src\Lib\Protocol\bin\Debug\protobuf-net.xml
+C:\Users\mtk15\source\repos\MMO\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CoreCompileInputs.cache
+C:\Users\mtk15\source\repos\MMO\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CopyComplete
+C:\Users\mtk15\source\repos\MMO\Src\Lib\Protocol\obj\Debug\Protocol.dll
+C:\Users\mtk15\source\repos\MMO\Src\Lib\Protocol\obj\Debug\Protocol.pdb
+C:\Users\mtk15\source\repos\MMO\Src\Lib\Protocol\obj\Debug\Protocol.csproj.AssemblyReference.cache

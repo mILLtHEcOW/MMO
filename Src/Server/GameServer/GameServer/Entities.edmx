@@ -55,9 +55,9 @@
   </EntityType>
   <EntityType Name="TCharItems">
     <Key>
-      <PropertyRef Name="Id" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TCharacterID" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="UserPlayer">
@@ -160,9 +160,9 @@
         </Association>
         <EntityType Name="TCharItem">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="TCharacter" Relationship="ExtremeWorldModel.TCharacterTCharItem" FromRole="TCharItem" ToRole="TCharacter" />
           <Property Name="TCharacterID" Type="Int32" Nullable="false" />
         </EntityType>
@@ -218,7 +218,7 @@
     <EntitySetMapping Name="TCharItems">
       <EntityTypeMapping TypeName="IsTypeOf(ExtremeWorldModel.TCharItem)">
         <MappingFragment StoreEntitySet="TCharItems">
-          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="TCharacterID" ColumnName="TCharacterID" />
         </MappingFragment>
       </EntityTypeMapping>

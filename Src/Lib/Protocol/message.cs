@@ -174,7 +174,7 @@ namespace SkillBridge.Message
         public MapTeleportRequest mapTeleport { get; set; }
 
         [global::ProtoBuf.ProtoMember(10)]
-        public FirstTestRequest FirsttestRequest { get; set; }
+        public FirstTestRequest firstRequest { get; set; }
 
     }
 
@@ -218,9 +218,9 @@ namespace SkillBridge.Message
         global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
             => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
 
-        [global::ProtoBuf.ProtoMember(1)]
+        [global::ProtoBuf.ProtoMember(1, Name = @"helloworld")]
         [global::System.ComponentModel.DefaultValue("")]
-        public string helloWrold { get; set; } = "";
+        public string Helloworld { get; set; } = "";
 
     }
 

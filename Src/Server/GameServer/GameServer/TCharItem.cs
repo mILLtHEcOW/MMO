@@ -14,7 +14,7 @@ namespace GameServer
     
     public partial class TCharItem
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public int TCharacterID { get; set; }
     
         public virtual TCharacter TCharacter { get; set; }

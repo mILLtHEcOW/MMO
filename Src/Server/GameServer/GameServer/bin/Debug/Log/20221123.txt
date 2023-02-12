@@ -1,0 +1,28 @@
+
+2022-11-23 00:36:55,478 [1] [INFO ] [GameServer] £ºGame Server Init
+2022-11-23 00:36:56,008 [1] [INFO ] [GameServer] £ºUserService Initiated
+2022-11-23 00:36:56,015 [1] [INFO ] [GameServer] £ºHelloWorld Initiated
+2022-11-23 00:36:56,021 [1] [WARN ] [GameServer] £ºStarting Listener...
+2022-11-23 00:36:56,101 [13] [WARN ] [GameServer] £ºMessageDistribute thread start
+2022-11-23 00:36:56,102 [10] [WARN ] [GameServer] £ºMessageDistribute thread start
+2022-11-23 00:36:56,102 [11] [WARN ] [GameServer] £ºMessageDistribute thread start
+2022-11-23 00:36:56,104 [12] [WARN ] [GameServer] £ºMessageDistribute thread start
+2022-11-23 00:36:56,110 [6] [WARN ] [GameServer] £ºMessageDistribute thread start
+2022-11-23 00:36:56,112 [7] [WARN ] [GameServer] £ºMessageDistribute thread start
+2022-11-23 00:36:56,114 [8] [WARN ] [GameServer] £ºMessageDistribute thread start
+2022-11-23 00:36:56,115 [9] [WARN ] [GameServer] £ºMessageDistribute thread start
+2022-11-23 00:36:56,242 [1] [WARN ] [GameServer] £ºNetService Started
+2022-11-23 00:38:26,268 [4] [WARN ] [GameServer] £ºClient[127.0.0.1:57354]] Connected
+2022-11-23 00:38:26,653 [4] [WARN ] [GameServer] £ºClient[] DataReceived Len:21
+2022-11-23 00:38:26,815 [6] [INFO ] [GameServer] £ºFirstTestRequest: HelloWorld:Hello World
+2022-11-23 00:38:32,938 [14] [WARN ] [GameServer] £ºClient[] Disconnected
+2022-11-23 00:38:32,939 [4] [WARN ] [GameServer] £ºClient[127.0.0.1:57361]] Connected
+2022-11-23 00:38:32,949 [4] [WARN ] [GameServer] £ºClient[] DataReceived Len:18
+2022-11-23 00:38:32,955 [6] [INFO ] [GameServer] £ºUserRegisterRequest: User: 134   Pass:134
+2022-11-23 00:38:42,400 [14] [WARN ] [GameServer] £ºClient[] DataReceived Len:18
+2022-11-23 00:38:42,403 [7] [INFO ] [GameServer] £ºUserLoginRequest: User:134, Password:134
+2022-11-23 00:38:44,424 [14] [WARN ] [GameServer] £ºClient[] Disconnected
+2022-11-23 02:22:10,379 [14] [WARN ] [GameServer] £ºClient[127.0.0.1:53149]] Connected
+2022-11-23 02:22:10,699 [14] [WARN ] [GameServer] £ºClient[] DataReceived Len:21
+2022-11-23 02:22:10,701 [6] [INFO ] [GameServer] £ºFirstTestRequest: HelloWorld:Hello World
+2022-11-23 02:22:34,565 [14] [WARN ] [GameServer] £ºClient[] Disconnected

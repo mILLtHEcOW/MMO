@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 08/02/2021 17:48:07
--- Generated from EDMX file: D:\UnityProject\MMO\Src\Server\GameServer\GameServer\Entities.edmx
+-- Date Created: 11/21/2022 18:18:03
+-- Generated from EDMX file: C:\Users\mtk15\source\repos\MMO\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -21,6 +21,9 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_PlayerCharacter]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Characters] DROP CONSTRAINT [FK_PlayerCharacter];
 GO
+IF OBJECT_ID(N'[dbo].[FK_TCharacterTCharItem]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[TCharItems] DROP CONSTRAINT [FK_TCharacterTCharItem];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -34,6 +37,9 @@ IF OBJECT_ID(N'[dbo].[Players]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[Characters]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Characters];
+GO
+IF OBJECT_ID(N'[dbo].[TCharItems]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TCharItems];
 GO
 
 -- --------------------------------------------------
@@ -72,7 +78,7 @@ GO
 
 -- Creating table 'TCharItems'
 CREATE TABLE [dbo].[TCharItems] (
-    [Id] int IDENTITY(1,1) NOT NULL,
+    [ID] int IDENTITY(1,1) NOT NULL,
     [TCharacterID] int  NOT NULL
 );
 GO
@@ -99,10 +105,10 @@ ADD CONSTRAINT [PK_Characters]
     PRIMARY KEY CLUSTERED ([ID] ASC);
 GO
 
--- Creating primary key on [Id] in table 'TCharItems'
+-- Creating primary key on [ID] in table 'TCharItems'
 ALTER TABLE [dbo].[TCharItems]
 ADD CONSTRAINT [PK_TCharItems]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
+    PRIMARY KEY CLUSTERED ([ID] ASC);
 GO
 
 -- --------------------------------------------------

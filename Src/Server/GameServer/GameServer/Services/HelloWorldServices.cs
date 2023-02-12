@@ -13,7 +13,7 @@ namespace GameServer.Services
     {
         public void init()
         {
-           
+            Log.InfoFormat("HelloWorld Initiated");
         }
 
         public void Start()
@@ -23,7 +23,7 @@ namespace GameServer.Services
 
         void onFirstTestRequest(NetConnection<NetSession> sender, FirstTestRequest request)
         {
-            Log.InfoFormat("FirstTestRequest: HelloWorld:{0}", request.helloWrold);
+            Log.InfoFormat("FirstTestRequest: HelloWorld:{0}", request.Helloworld);
         }
 
         public void Stop()

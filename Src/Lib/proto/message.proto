@@ -120,7 +120,7 @@ message NetMessageRequest{
 	MapEntitySyncRequest mapEntitySync = 8;
 	MapTeleportRequest mapTeleport = 9;
 
-	FirstTestRequest FirsttestRequest = 10;
+	FirstTestRequest firstRequest = 10;
 }
 
 message NetMessageResponse{
@@ -140,7 +140,7 @@ message NetMessageResponse{
 
 // User Protocol
 message FirstTestRequest {
-	string helloWrold = 1;
+	string helloworld = 1;
 }
 
 message UserLoginRequest {

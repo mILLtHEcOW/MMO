@@ -4,67 +4,53 @@ using UnityEngine;
 using UnityEngine.UI;
 using Services;
 using SkillBridge.Message;
+using System;
 
-public class UIRegister : MonoBehaviour {
+public class UIRegister : MonoBehaviour
+{
+    public InputField registerEmail;
+    public InputField registerPassword;
+    public InputField ConfirmPassword;
+    public Toggle agreeTerms;
 
-
-    public InputField username;
-    public InputField password;
-    public InputField passwordConfirm;
-    public Button buttonRegister;
-
-    public GameObject uiLogin;
-    // Use this for initialization
-    void Start () {
-        UserService.Instance.OnRegister = OnRegister;
+    private void Start()
+    {
+        UserService.Instance.OnRegister += OnRegister;
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
+    private void OnRegister(Result result, string msg)
+    {
+        MessageBox.Show(string.Format("结果:{0}, msg:{1}", result, msg));
+    }
 
     public void OnClickRegister()
     {
-        if (string.IsNullOrEmpty(this.username.text))
+        if (string.IsNullOrEmpty(registerEmail.text))
         {
-            MessageBox.Show("请输入账号");
+            MessageBox.Show("请输入登录邮箱");
             return;
         }
-        if (string.IsNullOrEmpty(this.password.text))
+        if (string.IsNullOrEmpty(registerPassword.text))
         {
-            MessageBox.Show("请输入密码");
+            MessageBox.Show("请输入登录密码");
             return;
         }
-        if (string.IsNullOrEmpty(this.passwordConfirm.text))
+        if (string.IsNullOrEmpty(ConfirmPassword.text))
         {
             MessageBox.Show("请输入确认密码");
             return;
         }
-        if (this.password.text != this.passwordConfirm.text)
+        if (registerPassword.text != ConfirmPassword.text)
         {
-            MessageBox.Show("两次输入的密码不一致");
+            MessageBox.Show("两次密码不一致");
+            return;
+        }
+        if (!agreeTerms.isOn)
+        {
+            MessageBox.Show("请阅读并同意《用户协议》");
             return;
         }
 
-        UserService.Instance.SendRegister(this.username.text,this.password.text);
-    }
-
-
-    void OnRegister(Result result, string message)
-    {
-        if (result == Result.Success)
-        {
-            //登录成功，进入角色选择
-            MessageBox.Show("注册成功,请登录", "提示", MessageBoxType.Information).OnYes = this.CloseRegister;
-        }
-        else
-            MessageBox.Show(message, "错误", MessageBoxType.Error);
-    }
-
-    void CloseRegister()
-    {
-        this.gameObject.SetActive(false);
-        uiLogin.SetActive(true);
+        UserService.Instance.SendRegister(registerEmail.text, registerPassword.text);
     }
 }

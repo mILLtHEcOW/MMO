@@ -12,30 +12,64 @@ namespace GameServer.Services
 {
     class UserService : Singleton<UserService>
     {
-
         public UserService()
         {
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserLoginRequest>(this.OnLogin);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserRegisterRequest>(this.OnRegister);
         }
 
         public void Init()
         {
-
+            Log.InfoFormat("UserService Initiated");
         }
 
-        void OnRegister(NetConnection<NetSession> sender, UserRegisterRequest request)
+        private void OnLogin(NetConnection<NetSession> sender, UserLoginRequest request)
         {
-            Log.InfoFormat("UserRegisterRequest: User:{0}  Pass:{1}", request.User, request.Passward);
+            Log.InfoFormat("UserLoginRequest: User:{0}, Password:{1}", request.User, request.Passward);
 
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();
-            message.Response.userRegister = new UserRegisterResponse();
+            message.Response.userLogin = new UserLoginResponse();
 
             TUser user = DBService.Instance.Entities.Users.Where(u => u.Username == request.User).FirstOrDefault();
             if (user != null)
             {
+                if (user.Password != request.Passward)
+                {
+                    message.Response.userLogin.Result = Result.Failed;
+                    message.Response.userLogin.Errormsg = "密码错误!";
+                }
+                else
+                {
+                    message.Response.userLogin.Result = Result.Success;
+                    message.Response.userLogin.Errormsg = "登陆成功!";
+                }
+            }
+            else
+            {
+                message.Response.userLogin.Result = Result.Failed;
+                message.Response.userLogin.Errormsg = "用户不存在.";
+            }
+
+            byte[] data = PackageHandler.PackMessage(message);
+            sender.SendData(data, 0, data.Length);
+        }
+
+
+
+        private void OnRegister(NetConnection<NetSession> sender, UserRegisterRequest request)
+        {
+            Log.InfoFormat("UserRegisterRequest: User: {0}   Pass:{1}", request.User, request.Passward);
+
+            NetMessage message = new NetMessage();
+            message.Response = new NetMessageResponse();
+            message.Response.userRegister = new UserRegisterResponse();
+            //回头看看这句
+            TUser user = DBService.Instance.Entities.Users.Where(u => u.Username == request.User).FirstOrDefault();
+            if (user != null)
+            {
                 message.Response.userRegister.Result = Result.Failed;
-                message.Response.userRegister.Errormsg = "用户已存在.";
+                message.Response.userRegister.Errormsg = "用户已存在!";
             }
             else
             {
